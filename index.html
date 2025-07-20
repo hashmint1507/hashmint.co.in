@@ -2,123 +2,116 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HashMint Solutions & Consulting</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="HashMint | IT Consulting and Software Solutions" />
+  <title>HashMint | IT Consulting & Software Development</title>
+  <link rel="icon" type="image/png" href="logo.png" />
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    * {
       margin: 0;
       padding: 0;
-      color: #333;
-      background-color: #f9f9f9;
+      box-sizing: border-box;
     }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f8f9fa;
+      color: #333;
+      line-height: 1.6;
+    }
+
     header {
-      background-color: #24292e;
+      background-color: #0d1117;
+      color: #fff;
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    header img {
+      height: 50px;
+    }
+
+    nav a {
+      color: #fff;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #34d399;
+    }
+
+    .hero {
+      background: linear-gradient(to right, #0f766e, #10b981);
       color: white;
-      padding: 40px 20px;
+      padding: 100px 40px;
       text-align: center;
     }
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
+
+    .hero h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
     }
-    header p {
-      margin: 10px 0 0;
-      font-size: 1.1rem;
-    }
-    section {
-      padding: 40px 20px;
-      max-width: 960px;
+
+    .section {
+      padding: 60px 40px;
+      max-width: 1100px;
       margin: auto;
     }
-    h2 {
-      color: #00539C;
+
+    .section h2 {
+      color: #0f766e;
+      margin-bottom: 20px;
     }
-    ul {
-      list-style-type: disc;
-      margin-left: 20px;
-    }
-    footer {
-      background-color: #24292e;
+
+    .footer {
+      background-color: #0d1117;
       color: white;
       text-align: center;
       padding: 20px;
-      margin-top: 40px;
-    }
-    .cta-button {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 24px;
-      background-color: #00539C;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>HashMint Solutions & Consulting</h1>
-    <p>Empowering your business with skilled tech talent and end-to-end software solutions.</p>
-    <a href="mailto:contactus@hashmint.co.in" class="cta-button">Get in Touch</a>
+    <img src="logo.png" alt="HashMint Logo" />
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
-  <section>
-    <h2>About Us</h2>
-    <p>HashMint is your trusted partner for scalable talent sourcing and software development. We specialize in Java, Full Stack, and DevOps domains—offering both on-demand resources and turnkey project solutions. With a flexible engagement model, we help you meet evolving tech demands while staying agile and cost-effective.</p>
+  <section class="hero">
+    <h1>Welcome to HashMint</h1>
+    <p>Expert Consulting, Project Delivery & Full Stack Development</p>
   </section>
 
-  <section>
-    <h2>Our Core Services</h2>
-
-    <h3>1. IT Consulting & Staff Augmentation</h3>
-    <p>We provide pre-vetted developers, DevOps engineers, and full-stack professionals tailored to your technology stack and delivery timelines.</p>
+  <section class="section" id="services">
+    <h2>Our Services</h2>
     <ul>
-      <li>Vendor-based staffing for short-term and long-term needs</li>
-      <li>Onsite and remote deployment of Full Stack, Java, and DevOps experts</li>
-      <li>Contract-to-hire, monthly, or project-based engagement models</li>
-      <li>Fast turnaround with technically screened candidates</li>
-    </ul>
-
-    <h3>2. Software Development & Delivery</h3>
-    <p>Our team delivers custom software projects across modern tech stacks, ensuring high performance, reliability, and scalability.</p>
-    <ul>
-      <li>Java-based application development</li>
-      <li>Full Stack (JavaScript/React/Angular + Node/Spring Boot) solutions</li>
-      <li>DevOps implementation (CI/CD pipelines, Docker, Jenkins, cloud infra)</li>
-      <li>Legacy migration (e.g., Struts to Spring Boot, monolith to microservices)</li>
-      <li>SLA-driven support and application maintenance</li>
-    </ul>
-
-    <h3>3. Technical Advisory & Troubleshooting</h3>
-    <p>Leverage our expertise to resolve challenges, optimize systems, and elevate code quality.</p>
-    <ul>
-      <li>Production issue diagnosis and resolution</li>
-      <li>Code reviews, technical debt cleanup, best practices consulting</li>
-      <li>Infrastructure and deployment optimization</li>
-      <li>DevOps audits and performance tuning</li>
+      <li><strong>IT Consulting:</strong> Providing expert Full Stack, Java & DevOps professionals tailored to your needs.</li>
+      <li><strong>Software Development:</strong> End-to-end Java & Full Stack web application design, delivery, and support.</li>
+      <li><strong>Troubleshooting & Reviews:</strong> In-depth audits and resolution services for IT projects and systems.</li>
     </ul>
   </section>
 
-  <section>
-    <h2>Why HashMint</h2>
-    <ul>
-      <li>Full-Spectrum Tech Expertise – Java, Full Stack, DevOps</li>
-      <li>Flexible Engagements – Resource consulting or full project delivery</li>
-      <li>Reliable, Fast Turnaround – Pre-vetted profiles, dedicated account handling</li>
-      <li>Startup & Enterprise Friendly – Scalable solutions, no bloated overhead</li>
-    </ul>
+  <section class="section" id="about">
+    <h2>About HashMint</h2>
+    <p>We are a team of passionate tech experts delivering scalable, secure, and reliable solutions. HashMint blends the best of technology and consulting to serve startups and enterprises with equal ease.</p>
   </section>
 
-  <section>
+  <section class="section" id="contact">
     <h2>Contact Us</h2>
-    <p>Email: <a href="mailto:contactus@hashmint.co.in">contactus@hashmint.co.in</a></p>
-    <p>Location: Pune, Maharashtra</p>
-    <p>Working Hours: Mon–Fri, 9AM – 6PM</p>
+    <p>Email us at: <a href="mailto:contactus@hashmint.co.in">contactus@hashmint.co.in</a></p>
+    <p>We'll get back to you within 24 hours.</p>
   </section>
 
-  <footer>
-     <p>&copy; 2025 HashMint Solutions & Consulting. All rights reserved.</p>
+  <footer class="footer">
+    <p>&copy; 2025 HashMint. All rights reserved.</p>
   </footer>
 </body>
 </html>
