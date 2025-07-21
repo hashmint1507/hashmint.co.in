@@ -4,44 +4,66 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>HashMint Solutions & Consulting</title>
-  <link rel="stylesheet" href="https://unpkg.com/swiper@9/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/swiper@9/swiper-bundle.min.css" />
   <style>
-    body {
+    * {
+      box-sizing: border-box;
       margin: 0;
+      padding: 0;
+    }
+
+    body {
       font-family: "Segoe UI", sans-serif;
       background-color: #ffffff;
       color: #333;
     }
 
     header {
+      background-color: #f0fdf4;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      background-color: #f0fdf4;
-      padding: 20px 40px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 15px 30px;
+      position: relative;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
 
-    header img {
-      height: 60px;
+    .logo-container {
+      display: flex;
+      align-items: center;
     }
 
-    header h1 {
+    .logo-container img {
+      height: 70px;
+      margin-right: 15px;
+    }
+
+    .logo-container h1 {
       font-size: 28px;
       color: #065f46;
-      margin-left: 15px;
+    }
+
+    nav {
+      display: flex;
     }
 
     nav ul {
-      list-style: none;
       display: flex;
       gap: 25px;
+      list-style: none;
     }
 
     nav a {
       text-decoration: none;
       color: #065f46;
-      font-weight: 500;
+      font-weight: 600;
+    }
+
+    .menu-icon {
+      display: none;
+      font-size: 28px;
+      cursor: pointer;
+      color: #065f46;
     }
 
     .hero {
@@ -58,48 +80,48 @@
 
     .hero p {
       font-size: 18px;
-      color: #333;
     }
 
     .section {
-      padding: 60px 40px;
-      max-width: 1200px;
+      padding: 60px 30px;
+      max-width: 1100px;
       margin: auto;
     }
 
     .section h3 {
-      font-size: 28px;
+      font-size: 26px;
       color: #065f46;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
     }
 
     .section p {
       font-size: 16px;
-      line-height: 1.7;
+      line-height: 1.6;
     }
 
     .swiper {
       width: 100%;
-      height: 300px;
+      height: 350px;
       margin-top: 40px;
     }
 
-    .swiper-slide {
-      background-position: center;
-      background-size: cover;
+    .swiper-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     .testimonial {
-      font-style: italic;
-      margin-top: 40px;
       background-color: #f9fafb;
-      padding: 20px;
+      padding: 30px;
       border-left: 4px solid #10b981;
+      margin-top: 50px;
+      font-style: italic;
     }
 
     .contact {
       background-color: #f0fdf4;
-      padding: 40px;
+      padding: 40px 30px;
     }
 
     footer {
@@ -109,25 +131,41 @@
       font-size: 14px;
     }
 
-    @media screen and (max-width: 768px) {
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 30px;
+        background-color: #f0fdf4;
+        padding: 15px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      }
+
+      nav.open {
+        display: flex;
+      }
+
+      .menu-icon {
+        display: block;
+      }
+
       nav ul {
         flex-direction: column;
-        gap: 10px;
-      }
-      header {
-        flex-direction: column;
-        align-items: flex-start;
+        gap: 15px;
       }
     }
   </style>
 </head>
 <body>
   <header>
-    <div style="display: flex; align-items: center;">
-      <img src="logo.png" alt="HashMint Logo" />
+    <div class="logo-container">
+      <img src="logo.png" alt="HashMint Logo">
       <h1>HashMint</h1>
     </div>
-    <nav>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <nav id="navbar">
       <ul>
         <li><a href="#consulting">Consulting</a></li>
         <li><a href="#development">Development</a></li>
@@ -141,7 +179,16 @@
     <h2>Welcome to HashMint Solutions & Consulting</h2>
     <p>Empowering your business through reliable IT consulting and full-stack development services.</p>
   </section>
-<br/>
+
+  <div class="swiper section">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="https://source.unsplash.com/1600x400/?technology,code" alt="Slide 1"></div>
+      <div class="swiper-slide"><img src="https://source.unsplash.com/1600x400/?business,office" alt="Slide 2"></div>
+      <div class="swiper-slide"><img src="https://source.unsplash.com/1600x400/?developer,software" alt="Slide 3"></div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+
   <section id="consulting" class="section">
     <h3>Staffing & Consulting</h3>
     <p>
@@ -149,7 +196,7 @@
       Our consulting team helps organizations scale efficiently by offering vendor-based staffing and troubleshooting services tailored to your needs.
     </p>
   </section>
-  <br/>
+<br/>
   <section id="development" class="section">
     <h3>Software Development</h3>
     <p>
@@ -164,25 +211,17 @@
     </p>
   </section>
 <br/>
-  <div class="swiper section">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide"><img src="https://source.unsplash.com/1600x400/?technology,code" alt="Slide 1" style="width: 100%; height: 100%; object-fit: cover;" /></div>
-      <div class="swiper-slide"><img src="https://source.unsplash.com/1600x400/?programming,cloud" alt="Slide 2" style="width: 100%; height: 100%; object-fit: cover;" /></div>
-    </div>
-    <div class="swiper-pagination"></div>
-  </div>
-
   <section class="section testimonial">
     <p>"HashMint helped us scale quickly with quality Java & DevOps talent. Their team is technically sound and easy to work with!"</p>
     <strong>- Tech Lead, Enterprise Client</strong>
   </section>
-
+<br/>
   <section id="contact" class="section contact">
     <h3>Contact Us</h3>
     <p>Email us at <a href="mailto:contactus@hashmint.co.in">contactus@hashmint.co.in</a> to discuss your requirements.</p>
     <p>We’ll get back to you within 24 hours with a customized plan.</p>
   </section>
-
+<br/>
   <footer>
     &copy; 2025 HashMint Solutions & Consulting. All rights reserved.
   </footer>
@@ -191,13 +230,18 @@
   <script>
     const swiper = new Swiper('.swiper', {
       loop: true,
-      pagination: {
-        el: '.swiper-pagination',
-      },
       autoplay: {
         delay: 3000,
       },
+      pagination: {
+        el: '.swiper-pagination',
+      }
     });
+
+    function toggleMenu() {
+      const nav = document.getElementById("navbar");
+      nav.classList.toggle("open");
+    }
   </script>
 </body>
 </html>
