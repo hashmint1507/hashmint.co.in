@@ -3,239 +3,201 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>HashMint Solutions and Consulting</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <title>HashMint Solutions & Consulting</title>
+  <link rel="stylesheet" href="https://unpkg.com/swiper@9/swiper-bundle.min.css"/>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Inter', sans-serif;
-    }
-
     body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
       background-color: #ffffff;
       color: #333;
     }
 
     header {
       display: flex;
+      align-items: center;
       justify-content: space-between;
-      align-items: center;
-      padding: 20px 5%;
-      background-color: #f8f8f8;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      position: sticky;
-      top: 0;
-      z-index: 10;
+      background-color: #f0fdf4;
+      padding: 20px 40px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
 
-    .logo {
-      display: flex;
-      align-items: center;
-    }
-
-    .logo img {
+    header img {
       height: 60px;
-      margin-right: 15px;
     }
 
-    .logo-text {
-      font-size: 1.6rem;
-      font-weight: 600;
-      color: #2b7a4b;
-    }
-
-    nav {
-      display: flex;
-      align-items: center;
+    header h1 {
+      font-size: 28px;
+      color: #065f46;
+      margin-left: 15px;
     }
 
     nav ul {
+      list-style: none;
       display: flex;
       gap: 25px;
-      list-style: none;
     }
 
-    nav ul li a {
+    nav a {
       text-decoration: none;
-      color: #333;
+      color: #065f46;
       font-weight: 500;
     }
 
-    .menu-toggle {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
-    }
-
-    .menu-toggle span {
-      background: #333;
-      height: 3px;
-      width: 25px;
-      margin: 3px 0;
-    }
-
-    @media screen and (max-width: 768px) {
-      nav ul {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 80px;
-        right: 5%;
-        background-color: white;
-        border: 1px solid #ccc;
-        padding: 15px;
-      }
-
-      nav ul.show {
-        display: flex;
-      }
-
-      .menu-toggle {
-        display: flex;
-      }
-    }
-
     .hero {
-      background-color: #d6f5e3;
-      padding: 100px 5% 80px;
+      background-color: #d1fae5;
       text-align: center;
+      padding: 60px 20px;
     }
 
-    .hero h1 {
-      font-size: 2.8rem;
-      color: #2b7a4b;
+    .hero h2 {
+      font-size: 36px;
+      color: #065f46;
+      margin-bottom: 15px;
     }
 
     .hero p {
-      font-size: 1.2rem;
-      margin-top: 15px;
+      font-size: 18px;
       color: #333;
     }
 
     .section {
-      padding: 80px 5%;
+      padding: 60px 40px;
+      max-width: 1200px;
+      margin: auto;
     }
 
-    .section h2 {
-      font-size: 2rem;
+    .section h3 {
+      font-size: 28px;
+      color: #065f46;
       margin-bottom: 20px;
-      color: #2b7a4b;
     }
 
     .section p {
-      font-size: 1rem;
-      line-height: 1.6;
-      color: #555;
+      font-size: 16px;
+      line-height: 1.7;
     }
 
-    .testimonials {
-      background-color: #f3f3f3;
-      padding: 80px 5%;
+    .swiper {
+      width: 100%;
+      height: 300px;
+      margin-top: 40px;
+    }
+
+    .swiper-slide {
+      background-position: center;
+      background-size: cover;
     }
 
     .testimonial {
-      background: white;
+      font-style: italic;
+      margin-top: 40px;
+      background-color: #f9fafb;
       padding: 20px;
-      border-radius: 10px;
-      margin-bottom: 20px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      border-left: 4px solid #10b981;
+    }
+
+    .contact {
+      background-color: #f0fdf4;
+      padding: 40px;
     }
 
     footer {
-      background-color: #2b7a4b;
-      color: white;
       text-align: center;
-      padding: 30px 5%;
-      font-size: 0.9rem;
+      padding: 20px;
+      background-color: #ecfdf5;
+      font-size: 14px;
     }
 
-    a {
-      color: inherit;
-    }
-
-    .btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 10px 20px;
-      background-color: #2b7a4b;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      text-decoration: none;
+    @media screen and (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+      }
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
     }
   </style>
 </head>
-
 <body>
-
   <header>
-    <div class="logo">
+    <div style="display: flex; align-items: center;">
       <img src="logo.png" alt="HashMint Logo" />
-      <div class="logo-text">Hash<span style="color: #2b7a4b;">Mint</span></div>
+      <h1>HashMint</h1>
     </div>
     <nav>
-      <div class="menu-toggle" onclick="toggleMenu()">
-        <span></span><span></span><span></span>
-      </div>
-      <ul id="menu">
-        <li><a href="#services">Services</a></li>
-        <li><a href="#testimonials">Testimonials</a></li>
+      <ul>
+        <li><a href="#consulting">Consulting</a></li>
+        <li><a href="#development">Development</a></li>
+        <li><a href="#support">Support</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <section class="hero">
-    <h1>Welcome to HashMint</h1>
-    <p>Your trusted partner in IT Consulting, Project Delivery, and Resource Management</p>
+    <h2>Welcome to HashMint Solutions & Consulting</h2>
+    <p>Empowering your business through reliable IT consulting and full-stack development services.</p>
   </section>
 
-  <section class="section" id="services">
-    <h2>Our Services</h2>
+  <section id="consulting" class="section">
+    <h3>Staffing & Consulting</h3>
     <p>
-      <strong>IT Consulting & Resourcing:</strong> We provide skilled professionals in Full Stack, Java, and DevOps technologies tailored to your business needs.
-    </p>
-    <p>
-      <strong>Software Development:</strong> End-to-end project execution and delivery including Java, Spring Boot, microservices, frontend, and deployment support.
-    </p>
-    <p>
-      <strong>Tech Troubleshooting:</strong> Expert code reviews, performance optimization, and architecture consultation to get your applications on track.
+      We specialize in providing skilled professionals across Full-Stack, Java, and DevOps for your projects.
+      Our consulting team helps organizations scale efficiently by offering vendor-based staffing and troubleshooting services tailored to your needs.
     </p>
   </section>
 
-  <section class="testimonials" id="testimonials">
-    <h2>What Our Clients Say</h2>
-    <div class="testimonial">
-      <p>"HashMint helped us scale quickly with top-notch Java developers. Their turnaround and quality is unmatched!"</p>
-      <strong>- Project Manager, FinTech Firm</strong>
+  <section id="development" class="section">
+    <h3>Software Development</h3>
+    <p>
+      From custom Java-based solutions to modern full-stack applications, our engineers deliver scalable, secure, and high-performance software tailored for enterprise environments. Our end-to-end execution model covers design, development, testing, and support.
+    </p>
+  </section>
+
+  <section id="support" class="section">
+    <h3>Expert Troubleshooting & Code Review</h3>
+    <p>
+      We offer in-depth project reviews, performance audits, and troubleshooting assistance to boost your product’s efficiency and maintainability. Let our senior consultants optimize your architecture and codebase.
+    </p>
+  </section>
+
+  <div class="swiper section">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="https://source.unsplash.com/1600x400/?technology,code" alt="Slide 1" style="width: 100%; height: 100%; object-fit: cover;" /></div>
+      <div class="swiper-slide"><img src="https://source.unsplash.com/1600x400/?programming,cloud" alt="Slide 2" style="width: 100%; height: 100%; object-fit: cover;" /></div>
     </div>
-    <div class="testimonial">
-      <p>"Their full-stack consulting streamlined our dev pipeline. Very professional and reliable."</p>
-      <strong>- CTO, SaaS Startup</strong>
-    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <section class="section testimonial">
+    <p>"HashMint helped us scale quickly with quality Java & DevOps talent. Their team is technically sound and easy to work with!"</p>
+    <strong>- Tech Lead, Enterprise Client</strong>
   </section>
 
-  <section class="section" id="contact">
-    <h2>Get in Touch</h2>
-    <p>For inquiries, collaboration or staffing needs, reach out to us:</p>
-    <p>Email: <a href="mailto:contactus@hashmint.co.in">contactus@hashmint.co.in</a></p>
-    <a href="mailto:contactus@hashmint.co.in" class="btn">Contact Us</a>
+  <section id="contact" class="section contact">
+    <h3>Contact Us</h3>
+    <p>Email us at <a href="mailto:contactus@hashmint.co.in">contactus@hashmint.co.in</a> to discuss your requirements.</p>
+    <p>We’ll get back to you within 24 hours with a customized plan.</p>
   </section>
 
   <footer>
-    &copy; 2025 HashMint Solutions and Consulting. All rights reserved.
+    &copy; 2025 HashMint Solutions & Consulting. All rights reserved.
   </footer>
 
+  <script src="https://unpkg.com/swiper@9/swiper-bundle.min.js"></script>
   <script>
-    function toggleMenu() {
-      const menu = document.getElementById("menu");
-      menu.classList.toggle("show");
-    }
+    const swiper = new Swiper('.swiper', {
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+      },
+      autoplay: {
+        delay: 3000,
+      },
+    });
   </script>
-
 </body>
 </html>
