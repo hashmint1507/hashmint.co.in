@@ -1,66 +1,153 @@
 <!DOCTYPE html><html lang="en"><head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HashMint - Empowering Your Vision</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
+  <title>HashMint - IT Solutions & Consulting</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
   <style>
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f8fa;
+    }
+    .navbar-brand img {
+      height: 50px;
+    }
+    .hero-section {
+      background: linear-gradient(135deg, #d3f9e6, #ffffff);
+      padding: 80px 20px;
+      text-align: center;
+    }
+    .hero-section h1 {
+      font-size: 2.5rem;
+      color: #222;
+    }
+    .card {
+      margin-bottom: 20px;
+    }
+    .section-title {
+      font-weight: bold;
+      margin-top: 40px;
+      margin-bottom: 20px;
+    }
+    .footer {
+      background-color: #eaf9f3;
+      padding: 20px 0;
+      text-align: center;
+      margin-top: 40px;
     }
   </style>
-</head><body class="bg-gray-100 text-gray-800">
-  <!-- Header -->
-  <header class="flex items-center justify-between px-6 py-4 bg-white shadow-md">
-    <div class="flex items-center space-x-2">
-      <img src="logo.png" alt="HashMint Logo" class="h-12 w-auto" />
-      <span class="text-2xl font-bold text-gray-800">Hash<span class="text-green-500">Mint</span></span>
+</head><body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="logo.png" alt="HashMint Logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#solutions">Solutions</a></li>
+          <li class="nav-item"><a class="nav-link" href="#consulting">Consulting</a></li>
+          <li class="nav-item"><a class="nav-link" href="#recruitment">Recruitment</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
     </div>
-    <nav class="space-x-6 text-sm hidden md:flex">
-      <a href="#solutions" class="hover:text-green-600">Solutions</a>
-      <a href="#consulting" class="hover:text-green-600">Consulting</a>
-      <a href="#about" class="hover:text-green-600">About</a>
-      <a href="#contact" class="hover:text-green-600">Contact</a>
-      <a href="#" class="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600">Get Started</a>
-    </nav>
-  </header>  <!-- Hero Section -->  <section class="bg-green-100 py-12 px-6 md:px-20">
-    <div class="max-w-4xl">
-      <h2 class="text-2xl md:text-3xl font-bold mb-4">Empowering Your Vision with <span class="text-green-600">Solutions</span></h2>
-      <p class="mb-6 text-sm">Professional IT solutions & business consulting for unstoppable growth. Transform your ideas into reality with Hashmint.</p>
-      <a href="#services" class="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600">Explore Services</a>
+  </nav>  <div class="hero-section">
+    <h1>Empowering Your Vision with Innovative IT Solutions</h1>
+    <p class="lead">Professional IT solutions & business consulting for unstoppable growth.<br>Transform your ideas into reality with HashMint.</p>
+    <a href="#solutions" class="btn btn-success mt-3">Explore Services</a>
+  </div>  <!-- Carousel -->  <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="slider1.jpg" class="d-block w-100" alt="Digital Transformation">
+      </div>
+      <div class="carousel-item">
+        <img src="slider2.jpg" class="d-block w-100" alt="Team Collaboration">
+      </div>
+      <div class="carousel-item">
+        <img src="slider3.jpg" class="d-block w-100" alt="Software Delivery">
+      </div>
     </div>
-  </section>  <!-- Services Section -->  <section id="services" class="py-10 px-6 md:px-20">
-    <h3 class="text-xl font-semibold mb-6">Our Solutions</h3>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-      <div class="bg-white p-4 rounded shadow">
-        <h4 class="font-semibold mb-2">Digital Transformation</h4>
-        <p class="text-sm">End-to-end digital strategy, automation, and cloud migration tailored for enterprises.</p>
+    <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>  <div class="container">
+    <h2 class="section-title" id="solutions">Our Solutions</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card p-3">
+          <h5>Digital Transformation</h5>
+          <p>End-to-end digital strategy, automation, and cloud migration tailored for enterprises.</p>
+        </div>
       </div>
-      <div class="bg-white p-4 rounded shadow">
-        <h4 class="font-semibold mb-2">Custom Software</h4>
-        <p class="text-sm">Premium software design & development to elevate your business workflow and performance.</p>
+      <div class="col-md-4">
+        <div class="card p-3">
+          <h5>Custom Software</h5>
+          <p>Premium software design & development to elevate your business workflow and performance.</p>
+        </div>
       </div>
-      <div class="bg-white p-4 rounded shadow">
-        <h4 class="font-semibold mb-2">Cybersecurity</h4>
-        <p class="text-sm">Protect your data with resilient, cutting-edge security solutions and risk management.</p>
+      <div class="col-md-4">
+        <div class="card p-3">
+          <h5>DevOps & Troubleshooting</h5>
+          <p>Streamline deployments and resolve production issues with expert support.</p>
+        </div>
       </div>
-    </div><h3 class="text-xl font-semibold mt-10 mb-6">Consulting Expertise</h3>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-  <div class="bg-white p-4 rounded shadow">
-    <h4 class="font-semibold mb-2">IT Strategy</h4>
-    <p class="text-sm">Expert advice for scalable digital architectures and technology innovation.</p>
+    </div><h2 class="section-title" id="consulting">Consulting Expertise</h2>
+<div class="row">
+  <div class="col-md-4">
+    <div class="card p-3">
+      <h5>IT Strategy</h5>
+      <p>Expert advice for scalable digital architectures and technology innovation.</p>
+    </div>
   </div>
-  <div class="bg-white p-4 rounded shadow">
-    <h4 class="font-semibold mb-2">Business Optimization</h4>
-    <p class="text-sm">Streamline processes and maximize ROI with actionable consulting insights.</p>
+  <div class="col-md-4">
+    <div class="card p-3">
+      <h5>Business Optimization</h5>
+      <p>Streamline processes and maximize ROI with actionable consulting insights.</p>
+    </div>
   </div>
-  <div class="bg-white p-4 rounded shadow">
-    <h4 class="font-semibold mb-2">Change Management</h4>
-    <p class="text-sm">Guidance and training for seamless adoption of new tech solutions.</p>
+  <div class="col-md-4">
+    <div class="card p-3">
+      <h5>Change Management</h5>
+      <p>Guidance and training for seamless adoption of new tech solutions.</p>
+    </div>
   </div>
 </div>
 
-  </section>  <!-- Footer -->  <footer class="mt-20 bg-white p-6 text-center text-sm text-gray-500">
-    &copy; 2025 HashMint. All rights reserved.
-  </footer>
-</body></html>
+<h2 class="section-title" id="recruitment">Recruitment Services</h2>
+<div class="row">
+  <div class="col-md-6">
+    <div class="card p-3">
+      <h5>Recruitment Consultancy</h5>
+      <p>We help companies source and onboard top IT talent with minimal effort.</p>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="card p-3">
+      <h5>Staff Augmentation</h5>
+      <p>Get skilled professionals on demand to scale your project team quickly.</p>
+    </div>
+  </div>
+</div>
+
+<h2 class="section-title" id="about">About HashMint</h2>
+<p>At HashMint, we believe in transforming ideas into impactful software. With a team of passionate engineers, strategists, and consultants, we help startups and enterprises innovate, grow, and lead.</p>
+
+<h2 class="section-title" id="contact">Contact Us</h2>
+<p>Have a project in mind or looking for IT experts to scale your team? Reach out to us:</p>
+<ul>
+  <li>Email: contact@hashmint.co.in</li>
+  <li>Phone: +91-98765-43210</li>
+  <li>Location: Bangalore, India</li>
+</ul>
+
+  </div>  <div class="footer">
+    <p>&copy; 2025 HashMint. All rights reserved.</p>
+  </div>  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script></body></html>
