@@ -1,124 +1,66 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hashmint Solution & Consulting</title>
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <!-- Header & Navigation -->
-  <header>
-    <div class="container nav-flex">
-      <div class="logo">
-        <!-- Replace with actual logo SVG or image as needed -->
-        <span>
-          <img src="logo.png"/>
-        </span>
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HashMint - Empowering Your Vision</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+</head><body class="bg-gray-100 text-gray-800">
+  <!-- Header -->
+  <header class="flex items-center justify-between px-6 py-4 bg-white shadow-md">
+    <div class="flex items-center space-x-2">
+      <img src="logo.png" alt="HashMint Logo" class="h-12 w-auto" />
+      <span class="text-2xl font-bold text-gray-800">Hash<span class="text-green-500">Mint</span></span>
+    </div>
+    <nav class="space-x-6 text-sm hidden md:flex">
+      <a href="#solutions" class="hover:text-green-600">Solutions</a>
+      <a href="#consulting" class="hover:text-green-600">Consulting</a>
+      <a href="#about" class="hover:text-green-600">About</a>
+      <a href="#contact" class="hover:text-green-600">Contact</a>
+      <a href="#" class="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600">Get Started</a>
+    </nav>
+  </header>  <!-- Hero Section -->  <section class="bg-green-100 py-12 px-6 md:px-20">
+    <div class="max-w-4xl">
+      <h2 class="text-2xl md:text-3xl font-bold mb-4">Empowering Your Vision with <span class="text-green-600">Solutions</span></h2>
+      <p class="mb-6 text-sm">Professional IT solutions & business consulting for unstoppable growth. Transform your ideas into reality with Hashmint.</p>
+      <a href="#services" class="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600">Explore Services</a>
+    </div>
+  </section>  <!-- Services Section -->  <section id="services" class="py-10 px-6 md:px-20">
+    <h3 class="text-xl font-semibold mb-6">Our Solutions</h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="bg-white p-4 rounded shadow">
+        <h4 class="font-semibold mb-2">Digital Transformation</h4>
+        <p class="text-sm">End-to-end digital strategy, automation, and cloud migration tailored for enterprises.</p>
       </div>
-      <nav>
-        <ul>
-          <li><a href="#services">Solutions</a></li>
-          <li><a href="#consulting">Consulting</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-      <a href="#contact" class="btn-primary nav-cta">Get Started</a>
-    </div>
-  </header>
-
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="container hero-content">
-      <h1>Empowering Your Vision with <span class="highlight">Premium Technology Solutions</span></h1>
-      <p>Professional IT solutions & business consulting for unstoppable growth. Transform your ideas into reality with Hashmint.</p>
-      <a href="#services" class="btn-primary">Explore Services</a>
-    </div>
-  </section>
-
-  <!-- Solutions & Consulting Sections -->
-  <section id="services" class="services">
-    <div class="container">
-      <h2 class="section-title">Our Solutions</h2>
-      <div class="cards">
-        <div class="card">
-          <h3>Digital Transformation</h3>
-          <p>End-to-end digital strategy, automation, and cloud migration tailored for enterprises.</p>
-        </div>
-        <div class="card">
-          <h3>Custom Software</h3>
-          <p>Premium software design & development to elevate your business workflow and performance.</p>
-        </div>
-        <div class="card">
-          <h3>Cybersecurity</h3>
-          <p>Protect your data with resilient, cutting-edge security solutions and risk management.</p>
-        </div>
+      <div class="bg-white p-4 rounded shadow">
+        <h4 class="font-semibold mb-2">Custom Software</h4>
+        <p class="text-sm">Premium software design & development to elevate your business workflow and performance.</p>
       </div>
-    </div>
-  </section>
-
-  <section id="consulting" class="consulting">
-    <div class="container">
-      <h2 class="section-title">Consulting Expertise</h2>
-      <div class="cards">
-        <div class="card">
-          <h3>IT Strategy</h3>
-          <p>Expert advice for scalable digital architectures and technology innovation.</p>
-        </div>
-        <div class="card">
-          <h3>Business Optimization</h3>
-          <p>Streamline processes and maximize ROI with actionable consulting insights.</p>
-        </div>
-        <div class="card">
-          <h3>Change Management</h3>
-          <p>Guidance and training for seamless adoption of new tech solutions.</p>
-        </div>
+      <div class="bg-white p-4 rounded shadow">
+        <h4 class="font-semibold mb-2">Cybersecurity</h4>
+        <p class="text-sm">Protect your data with resilient, cutting-edge security solutions and risk management.</p>
       </div>
-    </div>
-  </section>
+    </div><h3 class="text-xl font-semibold mt-10 mb-6">Consulting Expertise</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+  <div class="bg-white p-4 rounded shadow">
+    <h4 class="font-semibold mb-2">IT Strategy</h4>
+    <p class="text-sm">Expert advice for scalable digital architectures and technology innovation.</p>
+  </div>
+  <div class="bg-white p-4 rounded shadow">
+    <h4 class="font-semibold mb-2">Business Optimization</h4>
+    <p class="text-sm">Streamline processes and maximize ROI with actionable consulting insights.</p>
+  </div>
+  <div class="bg-white p-4 rounded shadow">
+    <h4 class="font-semibold mb-2">Change Management</h4>
+    <p class="text-sm">Guidance and training for seamless adoption of new tech solutions.</p>
+  </div>
+</div>
 
-  <!-- About Section -->
-  <section id="about" class="about">
-    <div class="container about-flex">
-      <div>
-        <h2>About Hashmint</h2>
-        <p>Hashmint Solution & Consulting stands for uncompromising quality, subtle professionalism, and unique solutions. Our expert teams blend technology and strategy for Fortune 500s and startups alike.</p>
-        <ul>
-          <li>Decades of combined leadership experience</li>
-          <li>Client-first, collaborative philosophy</li>
-          <li>Innovative and secure technology stack</li>
-        </ul>
-      </div>
-      <div class="about-img"></div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="contact">
-    <div class="container contact-flex">
-      <div>
-        <h2>Start Your Journey</h2>
-        <p>Ready to transform your organization? Contact our team today.</p>
-        <form id="contactForm" autocomplete="off">
-          <input type="text" name="name" placeholder="Your Name*" required>
-          <input type="email" name="email" placeholder="Your Email*" required>
-          <textarea name="message" rows="4" placeholder="Your Message*" required></textarea>
-          <button class="btn-primary" type="submit">Send Message</button>
-        </form>
-        <div id="formMessage"></div>
-      </div>
-      <div class="contact-img"></div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <span>© 2025 Hashmint Solution & Consulting. All Rights Reserved.</span>
-    </div>
+  </section>  <!-- Footer -->  <footer class="mt-20 bg-white p-6 text-center text-sm text-gray-500">
+    &copy; 2025 HashMint. All rights reserved.
   </footer>
-  <script src="script.js"></script>
-</body>
-</html>
+</body></html>
